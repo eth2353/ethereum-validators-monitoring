@@ -23,6 +23,7 @@ export enum Network {
   Mainnet = 1,
   Görli = 5,
   Kintsugi = 1337702,
+  Holesky = 17000,
 }
 
 export enum ValidatorRegistrySource {
@@ -158,7 +159,7 @@ export class EnvironmentVariables {
   public CL_API_GET_BLOCK_INFO_MAX_RETRIES = 1;
 
   @IsNumber()
-  @Min(74240) // Altair
+//  @Min(74240) // Altair
   @Transform(({ value }) => parseInt(value, 10), { toClassOnly: true })
   public START_EPOCH = 155000;
 
